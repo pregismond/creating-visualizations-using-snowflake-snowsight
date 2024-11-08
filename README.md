@@ -17,7 +17,7 @@ This repository contains a project based on the final assignment for the **[BI D
 
 ## Project Scenario
 
-SwiftAuto Traders has hired a data scientist to analyze car sales and profits for each dealer. Their first task is to create visualizations and present them as a dashboard to my regional manager.
+SwiftAuto Traders has hired a data scientist to analyze car sales and profits for each dealer. Their first task is to create visualizations and present them as a dashboard to the regional manager.
 
 ## Objectives
 
