@@ -296,7 +296,7 @@ A blank worksheet opens, overlaying the dashboard.
 7. Select `Return to Sales` to save your worksheet and add it to the dashboard.
 ![03.06-07_num_recalls_by_model](./images/03.06-07_num_recalls_by_model.png)
 
-    The `Service` dashboard will look like:
+    The `Service` dashboard will look like this:
     ![03_service_panel1](./images/03_service_panel1.png)
 
 ### Add a tile to capture the customer sentiment by comparing positive, neutral, and negative reviews (as a treemap)
@@ -339,7 +339,7 @@ A blank worksheet opens, overlaying the dashboard.
 7. Select `Return to Sales` to save your worksheet and add it to the dashboard.
 ![03.06-07_sentiment](./images/03.06-07_sentiment.png)
 
-    The `Service` dashboard will look like:
+    The `Service` dashboard will look like this:
     ![03_service_panel2](./images/03_service_panel2.png)
 
 ### Add a tile to capture the quantity of cars sold per month compared to the profit (as a line and column chart)
@@ -388,7 +388,7 @@ A blank worksheet opens, overlaying the dashboard.
 7. Select `Return to Sales` to save your worksheet and add it to the dashboard.
 ![03.06-07_profit_by_month](./images/03.06-07_profit_by_month.png)
 
-    The `Service` dashboard will look like:
+    The `Service` dashboard will look like this:
     ![03_service_panel3a](./images/03_service_panel3a.png)
 
 Next, duplicate the `Profit by Month` tile to add a tile titled as `Quantity Sold by Month` to the `Service` dashboard by completing the following steps:
@@ -418,7 +418,7 @@ A copy of the `Profit by Month` tile appears at the bottom of the dashboard.
 12. Select `Return to Sales` to save your worksheet and add it to the dashboard.
 ![03.11-12_quantity_sold_by_month](./images/03.11-12_quantity_sold_by_month.png)
 
-    The `Service` dashboard will look like:
+    The `Service` dashboard will look like this:
     ![03_service_panel3b](./images/03_service_panel3b.png)
 
 ### Add a tile to capture the number of recalls by model and affected system (as a heat map)
@@ -465,7 +465,7 @@ A blank worksheet opens, overlaying the dashboard.
 
 8. By default, tiles are added to the bottom of the dashboard. Resize the `# of Recalls by Model and Affected System` tile.
 
-    The `Service` dashboard will look like:
+    The `Service` dashboard will look like this:
     ![03_service_panel4](./images/03_service_panel4.png)
 
     <span style="color:yellow">*The final assignment called for a `Service` dashboard featuring four distinct charts. However, due to Snowsight's limitations, we had to slightly adjust the layout to effectively capture the KPIs.*</span>
@@ -515,8 +515,13 @@ Repeat these steps to share the `Service` dashboard.
 11. Select `Sales`.
 ![04.10-11_share_dashboards](./images/04.10-11_share_dashboards.png)
 
-    The `Sales` dashboard will look like:
+    The `Sales` dashboard will look like this:
     ![04_sales_dashboard](./images/04_sales_dashboard.png)
+
+    Similarly, the `Service` dashboard will look like this:
+    ![04_service_dashboard](./images/04_service_dashboard.png)
+
+    <span style="color:yellow">*Users granted `View + run` access to a shared dashboard can view the results and the queries that drive each tile from the tile menu (`∙∙∙`). They can re-run the queries in the dashboard to refresh the data, but they cannot edit the dashboard or change any of its properties.*</span>
 
 
 **End of assignment**.
