@@ -17,7 +17,7 @@ This repository contains a project based on the final assignment for the **[BI D
 
 ## Project Scenario
 
-At SwiftAuto Traders, my role as a data scientist involves analyzing car sales and profits for each dealer. My first task is to create visualizations and present them as a dashboard to my regional manager.
+SwiftAuto Traders has hired a data scientist to analyze car sales and profits for each dealer. Their first task is to create visualizations and present them as a dashboard to my regional manager.
 
 ## Objectives
 
@@ -26,7 +26,7 @@ At SwiftAuto Traders, my role as a data scientist involves analyzing car sales a
 
 ## Datasets
 
-For this project, we will use a modified subset of the [**Automotive Industry Sample Data**](./Automotive_Industry/), which is available in this repository.
+For this project, we will use a modified subset of the [Automotive Industry Sample Data](./Automotive_Industry/), which is available in this repository.
 
 The original dataset can be found here: [Automotive Industry Sample Data](https://accelerator.ca.analytics.ibm.com/bi/?utm_source=skills_network&utm_content=in_lab_content_link&utm_id=Lab-IBMSkillsNetwork-DV0130EN-Coursera&perspective=authoring&pathRef=.public_folders%2FIBM%2BAccelerator%2BCatalog%2FContent%2FDAT00142&id=i22898C2A4DD748F79E0FC2BD017F4FE8&objRef=i22898C2A4DD748F79E0FC2BD017F4FE8&action=run&format=HTML&cmPropStr=%7B%22id%22%3A%22i22898C2A4DD748F79E0FC2BD017F4FE8%22%2C%22type%22%3A%22reportView%22%2C%22defaultName%22%3A%22DAT00142%22%2C%22permissions%22%3A%5B%22execute%22%2C%22read%22%2C%22traverse%22%5D%7D)
 
