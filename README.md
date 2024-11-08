@@ -7,7 +7,9 @@
 
 ## Disclaimer
 
-This repository contains a project based on the final assignment for the **[BI Dashboards with IBM Cognos Analytics and Google Looker](https://www.coursera.org/learn/bi-dashboards-with-ibm-cognos-analytics-and-google-looker)** course on Coursera. The original assignment focused on creating and analyzing business intelligence (BI) dashboards/reports using IBM Cognos Analytics and Google Looker Studio. However, for this project, I have modified the assignment to utilize Snowflake's Snowsight.
+This repository contains a project based on the final assignment for the **[BI Dashboards with IBM Cognos Analytics and Google Looker](https://www.coursera.org/learn/bi-dashboards-with-ibm-cognos-analytics-and-google-looker)** course on Coursera. The original assignment focused on creating and analyzing business intelligence (BI) dashboards/reports using IBM Cognos Analytics and Google Looker Studio.
+
+For this project, I have adapted the assignment to utilize Snowflake's Snowsight. Additionally, I have provided a Streamlit app that produces the same visualizations using Streamlit in Snowflake.
 
 ### Usage
 
