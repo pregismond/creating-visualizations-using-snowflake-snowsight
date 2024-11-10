@@ -2,6 +2,7 @@
 
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fpregismond%2Fcreating-visualizations-using-snowflake-snowsight&label=Visitors&countColor=%230d76a8&style=flat&labelStyle=none)
 [![License](https://img.shields.io/badge/License-Apache_2.0-0D76A8?style=flat)](https://opensource.org/licenses/Apache-2.0)
+[![Python 3.10.12](https://img.shields.io/badge/Python-3.10.12-green.svg)](https://shields.io/)
 [![Snowflake 8.41.2](https://img.shields.io/badge/Snowflake-8.41.2-green?style=flat&logo=snowflake&logoColor=white)](https://shields.io/)
 
 
@@ -9,7 +10,7 @@
 
 This repository contains a project based on the final assignment for the **[BI Dashboards with IBM Cognos Analytics and Google Looker](https://www.coursera.org/learn/bi-dashboards-with-ibm-cognos-analytics-and-google-looker)** course on Coursera. The original assignment focused on creating and analyzing business intelligence (BI) dashboards/reports using IBM Cognos Analytics and Google Looker Studio.
 
-For this project, I have adapted the assignment to utilize Snowflake's Snowsight. Additionally, I have provided a Streamlit app that produces the same visualizations using Streamlit in Snowflake.
+For this project, I have adapted the assignment to utilize Snowflake's Snowsight. Additionally, I have provided a Streamlit app that produces the same visualizations using Streamlit-in-Snowflake (SiS).
 
 ### Usage
 
@@ -59,7 +60,13 @@ Install the required libraries using the provided `requirements.txt` file. The c
 python3 -m pip install -r requirements.txt
 ```
 
-The [swiftauto_traders.py](swiftauto_traders.py) Python script has been provided to automate setting up a Snowflake environment, uploading CSV files, inferring their schema
+The [setup_swiftauto_traders.py](./setup_swiftauto_traders.py) Python script has been provided to setup the Snowflake environment for this project. It handles the uploading of CSV dataset files to stage, creates and loads tables with inferred schemas, and establishes a basic role hierarchy and user setup to demonstrate dashboard sharing within Snowflake.
+
+Before executing
+
+```bash
+python3 setup_swiftauto_traders.py
+```
 
 ## Learner
 
