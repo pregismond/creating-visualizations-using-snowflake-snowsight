@@ -7,7 +7,7 @@ For this project, I created a Streamlit app to demonstrate alternative ways of c
 <span style="color:yellow">*Before proceeding, please review and complete the setup steps outlined [here](./README.md/#setup).*</span>
 
 
-## Task 1 - Create a Streamlit app to capture Sales and Service KPI metrics
+## Create a Streamlit app to capture Sales and Service KPI metrics
 
 To create a `SwiftAuto Traders Dashboard` Streamlit app, complete the following steps:
 
@@ -20,7 +20,7 @@ To create a `SwiftAuto Traders Dashboard` Streamlit app, complete the following 
 4. From the role selector, select `SWIFTAUTO_BI_CREATOR_ROLE`.
 ![01.02-04_cr_streamlit_app](./images/01.02-04_cr_streamlit_app.png)
 
-    <span style="color:yellow">*The `SWIFTAUTO_BI_CREATOR_ROLE` has been granted only the necessary privileges to create Streamlit apps with `SELECT` access on `SWIFTAUTO_DB.AUTOMOTIVE` tables. The Streamlit app will run with the rights of this role. For more details on the privileges granted, see the [setup_swiftauto_traders.py](./setup_swiftauto_traders.py) script.*</span>
+    <span style="color:yellow">*The `SWIFTAUTO_BI_CREATOR_ROLE` has been granted only the necessary privileges to create Streamlit apps with `SELECT` access on existing `SWIFTAUTO_DB.AUTOMOTIVE` tables. The Streamlit app will run with the rights of this role. For more details on the privileges granted, see the [setup_swiftauto_traders.py](./setup_swiftauto_traders.py) script.*</span>
 
 5. Navigate to the `Projects` section and then to `Streamlit`.
 
@@ -490,7 +490,7 @@ To create a `SwiftAuto Traders Dashboard` Streamlit app, complete the following 
     ![01_cr_streamlit_app_service](./images/01_cr_streamlit_app_service.png)
 
 
-## Task 2 - Share a Streamlit app
+## Share a Streamlit app
 
 To share the `SwiftAuto Traders Dashboard` Streamlit app, complete the following steps:
 
