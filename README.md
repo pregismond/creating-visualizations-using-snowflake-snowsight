@@ -57,7 +57,7 @@ The [setup_swiftauto_traders.py](./setup_swiftauto_traders.py) Python script has
 
 **Install Snowflake Connector for Python**
 
-Make sure you have Python (version 3.10.12 or later) and pip installed on your system. Then, install the required libraries using the provided `requirements.txt` file. The command syntax is:
+Make sure you have Python (version 3.10.12 or later) and `pip` installed on your system. Then, install the required libraries using the provided `requirements.txt` file. The command syntax is:
 
 ```bash
 python3 -m pip install -r requirements.txt
