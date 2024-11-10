@@ -5,7 +5,6 @@
 [![Python 3.10.12](https://img.shields.io/badge/Python-3.10.12-green.svg)](https://shields.io/)
 [![Snowflake 8.41.2](https://img.shields.io/badge/Snowflake-8.41.2-green?style=flat&logo=snowflake&logoColor=white)](https://shields.io/)
 
-
 ## Disclaimer
 
 This repository contains a project based on the final assignment for the **[BI Dashboards with IBM Cognos Analytics and Google Looker](https://www.coursera.org/learn/bi-dashboards-with-ibm-cognos-analytics-and-google-looker)** course on Coursera. The original assignment focused on creating and analyzing business intelligence (BI) dashboards/reports using IBM Cognos Analytics and Google Looker Studio.
@@ -54,19 +53,50 @@ The terms of use are located at https://developer.ibm.com/terms/ibm-developer-te
 
 ## Setup
 
-Install the required libraries using the provided `requirements.txt` file. The command syntax is:
+The [setup_swiftauto_traders.py](./setup_swiftauto_traders.py) Python script has been provided to setup the Snowflake environment for this project. It handles the uploading of CSV dataset files to stage, creates and loads tables with inferred schemas, and establishes a basic role hierarchy and user setup to demonstrate dashboard sharing within Snowflake.
+
+**Install Snowflake Connector for Python**
+
+Make sure you have Python (version 3.10.12 or later) and pip installed on your system. Then, install the required libraries using the provided `requirements.txt` file. The command syntax is:
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
-The [setup_swiftauto_traders.py](./setup_swiftauto_traders.py) Python script has been provided to setup the Snowflake environment for this project. It handles the uploading of CSV dataset files to stage, creates and loads tables with inferred schemas, and establishes a basic role hierarchy and user setup to demonstrate dashboard sharing within Snowflake.
+**Setting Environment Variables for Snowflake Credentials**
 
-Before executing
+*Bash (Linux/Mac)*
+* Open Terminal
+* Use the `export` command to set environment variables:
+    ```bash
+    export SNOWFLAKE_USER='your_username'
+    export SNOWFLAKE_PASSWORD='your_password'
+    export SNOWFLAKE_ACCOUNT='your_account'
+    ```
+    Alternatively, you can add the environment variables to your bash login script `.bash_profile` or `.bashrc` so they are automatically set when you log in.
+
+*Windows*
+* Open Command Prompt.
+* Use the `setx` command to set environment variables:
+    ```cmd
+    setx SNOWFLAKE_USER "your_username"
+    setx SNOWFLAKE_PASSWORD "your_password"
+    setx SNOWFLAKE_ACCOUNT "your_account"
+    ```
+* Restart any open Command Prompt windows for the changes to take effect.
+
+
+**Execute `setup_swiftauto_traders.py`**
 
 ```bash
 python3 setup_swiftauto_traders.py
 ```
+Output: [setup_swiftauto_traders.log](./setup_swiftauto_traders.log)
+
+
+**Final Assignment using Snowsight: [Final_Assignment_Snowsight.md](./Final_Assignment_Snowsight.md)**
+
+**Final Assignment using Streamlit-in-Snowsight: [Final_Assignment_Streamlit.md](./Final_Assignment_Streamlit.md)**
 
 ## Learner
 
