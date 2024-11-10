@@ -63,7 +63,7 @@ Make sure you have Python (version 3.10.12 or later) and `pip` installed on your
 python3 -m pip install -r requirements.txt
 ```
 
-**Setting Environment Variables for Snowflake Credentials**
+**Set Environment Variables for Snowflake Credentials**
 
 *Bash (Linux/Mac)*
 * Open Terminal
@@ -85,7 +85,6 @@ python3 -m pip install -r requirements.txt
     ```
 * Restart any open Command Prompt windows for the changes to take effect.
 
-
 **Execute `setup_swiftauto_traders.py`**
 
 ```bash
@@ -94,9 +93,9 @@ python3 setup_swiftauto_traders.py
 Output: [setup_swiftauto_traders.log](./setup_swiftauto_traders.log)
 
 
-**Final Assignment using Snowsight: [Final_Assignment_Snowsight.md](./Final_Assignment_Snowsight.md)**
+Begin the [Final Assignment using Snowsight](./Final_Assignment_Snowsight.md)
 
-**Final Assignment using Streamlit-in-Snowsight: [Final_Assignment_Streamlit.md](./Final_Assignment_Streamlit.md)**
+Begin the [Final Assignment using Streamlit-in-Snowsight](./Final_Assignment_Streamlit.md)
 
 ## Learner
 
