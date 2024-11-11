@@ -53,7 +53,7 @@ The terms of use are located at https://developer.ibm.com/terms/ibm-developer-te
 
 ## Setup
 
-The [setup_swiftauto_traders.py](./setup_swiftauto_traders.py) Python script has been provided to setup the Snowflake environment for this project. It handles the uploading of CSV dataset files to stage, creates and loads tables with inferred schemas, and establishes a basic role hierarchy and user setup to demonstrate dashboard sharing within Snowflake.
+The [setup_swiftauto_traders.py](./setup_swiftauto_traders.py) Python script has been provided to setup the Snowflake environment for this project. It also handles the uploading of CSV dataset files to stage, creates and loads tables with inferred schemas, and establishes a basic role hierarchy and user setup to demonstrate dashboard sharing within Snowflake.
 
 **Install Snowflake Connector for Python**
 
@@ -92,9 +92,9 @@ python3 setup_swiftauto_traders.py
 ```
 Output: [setup_swiftauto_traders.log](./setup_swiftauto_traders.log)
 
+**Final Assignment**
 
-Begin the [Final Assignment using Snowsight](./Final_Assignment_Snowsight.md)
-
+Begin the [Final Assignment using Snowsight](./Final_Assignment_Snowsight.md)<br>
 Begin the [Final Assignment using Streamlit-in-Snowsight](./Final_Assignment_Streamlit.md)
 
 ## Learner
