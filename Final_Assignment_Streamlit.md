@@ -4,7 +4,7 @@ This project is based on the final assignment for the **[BI Dashboards with IBM 
 
 For this project, I created a Streamlit app to demonstrate alternative ways of creating visualizations in Snowflake and to address some of the limitations of Snowsight dashboards.
 
-<span style="color:yellow">*Before proceeding, please review and complete the setup steps outlined [here](./README.md/#setup).*</span>
+<span style="color:yellow">*Before proceeding, please review and complete the setup steps outlined [here](./README.md/#requirements).*</span>
 
 
 ## Create a Streamlit app to capture Sales and Service KPI metrics

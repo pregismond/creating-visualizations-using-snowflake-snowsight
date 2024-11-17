@@ -12,7 +12,7 @@ Snowsight currently supports the following types of charts:
 
 Due to the limited chart types available in Snowsight, suitable substitutions were made to effectively display the required KPIs.
 
-<span style="color:yellow">*Before proceeding, please review and complete the setup steps outlined [here](./README.md/#setup).*</span>
+<span style="color:yellow">*Before proceeding, please review and complete the setup steps outlined [here](./README.md/#requirements).*</span>
 
 ## Task Instructions
 
