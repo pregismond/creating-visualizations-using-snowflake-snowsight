@@ -539,3 +539,4 @@ To share the `SwiftAuto Traders Dashboard` Streamlit app, complete the following
 | Date (YYYY-MM-DD) | Version | Changed By | Change Description |
 |---|---|---|---|
 | 2024-10-25 | 0.1 | Pravin Regismond | Initial Version |
+| 2024-11-17 | 0.2 | Pravin Regismond | Updated README.md reference to point to Requirements heading |

@@ -532,3 +532,4 @@ Repeat these steps to share the `Service` dashboard.
 | Date (YYYY-MM-DD) | Version | Changed By | Change Description |
 |---|---|---|---|
 | 2024-10-11 | 0.1 | Pravin Regismond | Initial Version |
+| 2024-11-17 | 0.2 | Pravin Regismond | Updated README.md reference to point to Requirements heading |
