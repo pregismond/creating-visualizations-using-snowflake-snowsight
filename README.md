@@ -17,14 +17,35 @@ For this project, I have adapted the assignment to utilize Snowflake's Snowsight
 
 * If you choose to fork this repository, please ensure that you comply with the terms of the Apache License and give proper credit to the original authors.
 
-## Project Scenario
-
-SwiftAuto Traders has hired a data scientist to analyze car sales and profits for each dealer. Their first task is to create visualizations and present them as a dashboard to the regional manager.
-
 ## Objectives
 
 * Analyze the historical trends in car sales for SwiftAuto Traders
 * Provide insights on car sales and profits for each dealer
+
+## Project Scenario
+
+SwiftAuto Traders has hired a data scientist to analyze car sales and profits for each dealer. Their first task is to create visualizations and present them as a dashboard to the regional manager.
+
+## Project Layout
+
+This repository contains all of the source files, scripts, output files, and guides for completing the final assignment using Snowflake Snowsight and Streamlit.
+
+```text
+├── Automotive_Industry               <- Automotive Industry Sample Data
+│   ├── AU_Car_Models.csv             <- Contains information about individual car models
+│   ├── AU_Car_Recalls.csv            <- Contains information about the number and type of safety recalls that affect the types of cars sold
+│   ├── AU_Daily_Sales.csv            <- Contains information about daily automotive sales and weather at the time of the initial sales visit
+│   ├── AU_Dealers.csv                <- Contains information about individual car dealers
+│   ├── AU_Sales_By_Model.csv         <- Contains sales information
+│   └── AU_Sentiment.csv              <- Contains information about customer sentiment
+├── images                            <- Screenshot files used by the markdown files
+├── Final_Assignment_Snowsight.md     <- Visualizing Car Sales and Dealer Profits Using Snowflake Snowsight Guide
+├── Final_Assignment_Streamlit.md     <- Visualizing Car Sales and Dealer Profits Using Streamlit-in-Snowflake (SiS) Guide
+├── requirements.txt                  <- Dependency items to be installed by pip
+├── setup_swiftauto_traders.log       <- Output from setup_swiftauto_traders.py script
+├── setup_swiftauto_traders.py        <- Python script to automate the setup of the Snowflake environment for this project
+└── streamlit_swiftauto_traders.py    <- Single-page Streamlit in Snowflake app for SwiftAuto Traders
+```
 
 ## Datasets
 
@@ -51,6 +72,17 @@ The terms of use are located at https://developer.ibm.com/terms/ibm-developer-te
 
 **Task 4**: Share the dashboards.
 
+## Requirements
+
+This project has the following requirements:
+
+* Python 3.10.12 or higher
+* pip 24.3.1 or higher
+* A Snowflake user with `ACCOUNTADMIN` role granted. You can create a trial Snowflake account [here.](https://signup.snowflake.com/)
+    * Select `Enterprise` for your Snowflake edition and `Amazon Web Services` for your cloud provider.
+    * Choose the region nearest you, accept the terms, and click `GET STARTED`
+    * Go to your email, and click on the activation link.
+
 ## Setup
 
 The [setup_swiftauto_traders.py](./setup_swiftauto_traders.py) Python script has been provided to setup the Snowflake environment for this project. It also handles the uploading of CSV dataset files to stage, creates and loads tables with inferred schemas, and establishes a basic role hierarchy and user setup to demonstrate dashboard sharing within Snowflake.
@@ -64,6 +96,8 @@ python3 -m pip install -r requirements.txt
 ```
 
 **Set Environment Variables for Snowflake Credentials**
+
+Replace the placeholder values with your actual Snowflake account details when setting the environment variables.
 
 *Bash (Linux/Mac)*
 * Open Terminal
