@@ -13,6 +13,8 @@ DESCRIPTION: This script automates the setup of the Snowflake environment
 AUDIT TRAIL START                               INIT  DATE
 ----------------------------------------------  ----- -----------
 1. Initial version                              PR    2024-10-12
+2. Added COMMENT property for CREATE OR         PR    2024-11-17
+   REPLACE USER statements for documentation.
 
 AUDIT TRAIL END
 """
@@ -386,10 +388,12 @@ def create_users(cursor):
         "USE ROLE USERADMIN;",
         "CREATE OR REPLACE USER RM_DENVER "
         "PASSWORD = 'abc123' "
+        "COMMENT = 'Regional Manager, Denver, Colorado' "
         "MUST_CHANGE_PASSWORD = TRUE "
         "DEFAULT_WAREHOUSE = SWIFTAUTO_WH;",
         "CREATE OR REPLACE USER DS_JSMITH "
         "PASSWORD = 'abc123' "
+        "COMMENT = 'Data Scientist, SwiftAuto Traders' "
         "MUST_CHANGE_PASSWORD = TRUE "
         "DEFAULT_WAREHOUSE = SWIFTAUTO_WH;",
         "USE ROLE SECURITYADMIN;",
