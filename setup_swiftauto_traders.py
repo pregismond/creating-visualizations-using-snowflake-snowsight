@@ -15,6 +15,8 @@ AUDIT TRAIL START                               INIT  DATE
 1. Initial version                              PR    2024-10-12
 2. Added COMMENT property for CREATE OR         PR    2024-11-17
    REPLACE USER statements for documentation.
+3. Added DATA_ANALYST functional role for       PR    2024-11-18
+   documentation.
 
 AUDIT TRAIL END
 """
@@ -312,15 +314,19 @@ def create_roles(cursor):
         "CREATE ROLE IF NOT EXISTS SWIFTAUTO_READWRITE_ROLE "
         "COMMENT = 'Access role that permits read-write access for "
         "SWIFTAUTO_DB';",
+        "CREATE ROLE IF NOT EXISTS DATA_ANALYST "
+        "COMMENT = 'Functional role for data analysts';",
         "CREATE ROLE IF NOT EXISTS DATA_SCIENTIST "
         "COMMENT = 'Functional role for data scientists';",
         "CREATE ROLE IF NOT EXISTS REGIONAL_MANAGER "
         "COMMENT = 'Functional role for regional managers';",
+        "GRANT ROLE SWIFTAUTO_READ_ROLE TO ROLE DATA_ANALYST;",
         "GRANT ROLE SWIFTAUTO_BI_CREATOR_ROLE TO ROLE DATA_SCIENTIST;",
         "GRANT ROLE SWIFTAUTO_BI_VIEWER_ROLE TO ROLE DATA_SCIENTIST;",
         "GRANT ROLE SWIFTAUTO_READWRITE_ROLE TO ROLE DATA_SCIENTIST;",
         "GRANT ROLE SWIFTAUTO_BI_VIEWER_ROLE TO ROLE REGIONAL_MANAGER;",
-        "GRANT ROLE DATA_SCIENTIST, REGIONAL_MANAGER TO ROLE SYSADMIN;",
+        "GRANT ROLE DATA_ANALYST, DATA_SCIENTIST, REGIONAL_MANAGER "
+        "TO ROLE SYSADMIN;",
         "GRANT USAGE, MONITOR ON WAREHOUSE SWIFTAUTO_WH "
         "TO ROLE SWIFTAUTO_BI_CREATOR_ROLE;",
         "GRANT USAGE ON WAREHOUSE SWIFTAUTO_WH "
