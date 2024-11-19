@@ -3,7 +3,7 @@
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fpregismond%2Fcreating-visualizations-using-snowflake-snowsight&label=Visitors&countColor=%230d76a8&style=flat&labelStyle=none)
 [![License](https://img.shields.io/badge/License-Apache_2.0-0D76A8?style=flat)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.10.12](https://img.shields.io/badge/Python-3.10.12-green.svg)](https://shields.io/)
-[![Snowflake 8.41.2](https://img.shields.io/badge/Snowflake-8.41.2-green?style=flat&logo=snowflake&logoColor=white)](https://shields.io/)
+[![Snowflake 8.43.0](https://img.shields.io/badge/Snowflake-8.43.0-green?style=flat&logo=snowflake&logoColor=white)](https://shields.io/)
 
 ## Disclaimer
 
@@ -19,8 +19,8 @@ For this project, I have adapted the assignment to utilize Snowflake's Snowsight
 
 ## Objectives
 
-* Analyze the historical trends in car sales for SwiftAuto Traders
-* Provide insights on car sales and profits for each dealer
+* Analyze the historical trends in car sales for SwiftAuto Traders.
+* Provide insights on car sales and profits for each dealer.
 
 ## Project Scenario
 
@@ -62,15 +62,15 @@ The terms of use are located at https://developer.ibm.com/terms/ibm-developer-te
 * Create a bar chart to capture Quantity sold by model
 * Capture Average quantity sold
 
-**Task 2**: Develop a column chart to display Profit by Dealer ID in the `Sales` dashboard sorted in ascending order.
+**Task 2**: Develop a column chart to display Profit by Dealer ID in the `Sales` dashboard sorted in ascending order
 
 **Task 3**: Create another dashboard titled as `Service` and capture the following KPI metrics as visualizations:
 * Create a column chart to capture the number of recalls per model of car
-* Create a treemap to capture the customer sentiment by comparing positive, neutral, and negative reviews.
-* Create a line and column chart to capture the quantity of cars sold per month compared to the profit.
+* Create a treemap to capture the customer sentiment by comparing positive, neutral, and negative reviews
+* Create a line and column chart to capture the quantity of cars sold per month compared to the profit
 * Create a pivot table with heatmap to capture the number of recalls by model and affected system
 
-**Task 4**: Share the dashboards.
+**Task 4**: Share the dashboards
 
 ## Requirements
 
@@ -79,9 +79,9 @@ This project has the following requirements:
 * Python 3.10.12 or higher
 * pip 24.3.1 or higher
 * A Snowflake user with `ACCOUNTADMIN` role granted. You can create a trial Snowflake account [here.](https://signup.snowflake.com/)
-    * Select `Enterprise` for your Snowflake edition and `Amazon Web Services` for your cloud provider.
+    * Select `Enterprise` for your Snowflake edition and `Amazon Web Services` for your cloud provider
     * Choose the region nearest you, accept the terms, and click `GET STARTED`
-    * Go to your email, and click on the activation link.
+    * Go to your email, and click on the activation link
 
 ## Setup
 
@@ -126,7 +126,96 @@ python3 setup_swiftauto_traders.py
 ```
 Output: [setup_swiftauto_traders.log](./setup_swiftauto_traders.log)
 
-**Final Assignment**
+## Notes
+
+After executing the provided [setup_swiftauto_traders.py](./setup_swiftauto_traders.py) Python script, your Snowflake environment will be configured with the following components.
+
+### Database Objects
+#### Tables
+* The `SWIFTAUTO_DB.AUTOMOTIVE` namespace contains six tables:
+    * `AU_CAR_MODELS`
+    * `AU_CAR_RECALLS`
+    * `AU_DAILY_SALES`
+    * `AU_DEALERS`
+    * `AU_SALES_BY_MODEL`
+    * `AU_SENTIMENT`
+* Table schemas are automatically inferred from the structure of the corresponding CSV file.
+* To ensure compatibility and ease of use, column names containing spaces are replaced with underscores.
+
+![01_notes_swiftauto_db_tables](./images/01_notes_swiftauto_db_tables.png)
+
+#### Stages
+* The `SWIFTAUTO_DB.PUBLIC` namespace contains an `AUTOMOTIVE_INDUSTRY` stage with six CSV files:
+    * `AU_Car_Models.csv`
+    * `AU_Car_Recalls.csv`
+    * `AU_Daily_Sales.csv`
+    * `AU_Dealers.csv`
+    * `AU_Sales_By_Model.csv`
+    * `AU_Sentiment.csv`
+
+![01_notes_swiftauto_db_stages](./images/01_notes_swiftauto_db_stages.png)
+
+#### File Formats
+* The `SWIFTAUTO_DB.PUBLIC` namespace contains a `CSV_FF` file format with the following options:
+    * Fields are separated by commas
+    * The first row is used as column headers
+    * Leading and trailing spaces are removed from fields
+    * Fields may be optionally enclosed by double quotes
+    * '\\N', 'NULL', '' values are treated as SQL NULL
+    * Empty fields are inserted as SQL NULL
+    * An error is raise if the number of columns in the file does not match the table schema
+
+![01_notes_swiftauto_db_file_formats](./images/01_notes_swiftauto_db_file_formats.png)
+
+### Users & Roles
+To properly demonstrate the sharing of Snowsight dashboards, the following role hierarchy and users were created, enabling the data scientist to present the dashboards to the regional manager as outlined in the project scenario.
+
+| NAME | COMMENT |
+|---|---|
+| DS_JSMITH | Data Scientist, SwiftAuto Traders |
+| RM_DENVER | Regional Manager, Denver, Colorado |
+| DATA_ANALYST | Functional role for data analysts |
+| DATA_SCIENTIST | Functional role for data scientists |
+| REGIONAL_MANAGER | Functional role for regional managers |
+| SWIFTAUTO_BI_CREATOR_ROLE | Access role that permits BI creator access for SWIFTAUTO_DB |
+| SWIFTAUTO_BI_VIEWER_ROLE | Access role that permits BI viewer access for SWIFTAUTO_DB |
+| SWIFTAUTO_READ_ROLE | Access role that permits read-only access for SWIFTAUTO_DB |
+| SWIFTAUTO_READWRITE_ROLE | Access role that permits read-write access for SWIFTAUTO_DB |
+
+#### Users
+* Log in to Snowsight using the `DS_JSMITH` and `RM_DENVER` accounts with the password specified in the [setup_swiftauto_traders.py](./setup_swiftauto_traders.py) Python script.
+* Users are required to change their password upon their first login to the system.
+* Only users who have previously signed in to Snowsight can be assigned share permissions.
+
+![01_notes_users](./images/01_notes_users.png)
+
+#### Functional Roles
+
+*DATA_ANALYST*
+![data_analyst](./images/data_analyst.png)
+
+*DATA_SCIENTIST*
+![data_scientist](./images/data_scientist.png)
+
+*REGIONAL_MANAGER*
+![regional_manager](./images/regional_manager.png)
+
+#### Access Roles
+
+*SWIFTAUTO_BI_CREATOR_ROLE*
+![swiftauto_bi_creator_role](./images/swiftauto_bi_creator_role.png)
+
+*SWIFTAUTO_BI_VIEWER_ROLE*
+![swiftauto_bi_viewer_role](./images/swiftauto_bi_viewer_role.png)
+
+
+*SWIFTAUTO_READ_ROLE*
+![swiftauto_read_role](./images/swiftauto_read_role.png)
+
+*SWIFTAUTO_READWRITE_ROLE*
+![swiftauto_readwrite_role](./images/swiftauto_readwrite_role.png)
+
+## Final Assignment
 
 Begin the [Final Assignment using Snowsight](./Final_Assignment_Snowsight.md)<br>
 Begin the [Final Assignment using Streamlit-in-Snowsight](./Final_Assignment_Streamlit.md)
